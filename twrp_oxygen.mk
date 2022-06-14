@@ -18,15 +18,7 @@ PRODUCT_NAME := twrp_oxygen
 PRODUCT_DEVICE := oxygen
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Xiaomi Max 2
+PRODUCT_MODEL := MI MAX 2
 
 PRODUCT_PACKAGES += \
     qcom_decrypt
-
-# For ADB Debug
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.usb.config=adb

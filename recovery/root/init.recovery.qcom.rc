@@ -38,6 +38,11 @@ on fs
     on property:ro.crypto.state=encrypted
     start qseecomd
 
+on boot
+    # dt2w
+    chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/wakeup_mode
+    write /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/wakeup_mode "1"
+
 service qseecomd /system/bin/qseecomd
     oneshot
     disabled
